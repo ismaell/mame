@@ -210,7 +210,7 @@ INPUT_PORTS_END
 *     Machine Driver     *
 *************************/
 
-static MACHINE_CONFIG_START( qualeamusica, qualeamusica_state )
+static MACHINE_CONFIG_START( qualeamusica )
 	// basic machine hardware
 	MCFG_CPU_ADD("maincpu", I80C32, XTAL_11_0592MHz) /* Actually the board has a Dallas DS80C320 mcu. */
 	MCFG_CPU_PROGRAM_MAP(prog_map)
@@ -234,4 +234,4 @@ ROM_START( qmusica )
 	ROM_LOAD( "2400.ci4",   0x00000, 0x10000, CRC(4535f6b5) SHA1(e0db7653157a6b92e805f76207a999b7bcbc3d80) )
 ROM_END
 
-COMP(199?, qmusica, 0, 0, qualeamusica, qualeamusica, driver_device, 0, "Kortas/Bit9", "Qual e a Musica", MACHINE_NOT_WORKING|MACHINE_NO_SOUND)
+COMP(199?, qmusica, 0, 0, qualeamusica, qualeamusica, qualeamusica_state, 0, "Kortas/Bit9", "Qual e a Musica", MACHINE_NOT_WORKING|MACHINE_NO_SOUND)
